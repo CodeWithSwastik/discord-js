@@ -2,7 +2,16 @@
 
 This module let's you use discord.js in python by offering a similar syntax to the actual discord.js.
 
-# Simple bot
+## Installation
+Stable version:
+```
+pip install discord.js
+```
+Working version:
+```
+pip install git+https://github.com/CodeWithSwastik/discord-js
+```
+## Simple bot
 
 ```python
 from discordjs import Client, console
