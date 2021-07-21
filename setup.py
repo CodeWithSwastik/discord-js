@@ -2,7 +2,7 @@ from setuptools import setup
 import re
 
 version = ""
-with open("discordlib/__init__.py") as f:
+with open("discordjs/__init__.py") as f:
     version = re.search(
         r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE
     ).group(1)
