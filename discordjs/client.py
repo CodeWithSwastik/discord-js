@@ -1,12 +1,19 @@
-from discord import Client as dpyClient
 import inspect
 
+from typing import Callable
+from discord import Client as dpyClient
+
+class BadEvent(Exception):
+    """Raised if provided event type is not supported."""
+    pass
 
 class Client:
+    """Base bot class"""
+    
     def __init__(self):
         self.bot = dpyClient()
 
-    def on(self, event_name, callback):
+    def on(self, event_name: str, callback: Callable):
         if event_name == "ready":
 
             async def on_ready():
@@ -24,8 +31,8 @@ class Client:
 
             self.bot.event(on_message)
         else:
-            raise Exception(
-                "Unknown event type. Only 'ready' and 'message' events are supported for now!"
+            raise BadEvent(
+                "Unknown event type. Only 'ready' and 'message' events are supported for now."
             )
 
     def login(self, token):
