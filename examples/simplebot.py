@@ -1,4 +1,5 @@
-from discordjs import Client, console
+from discordjs import Client
+from javascript import console
 
 client = Client()
 

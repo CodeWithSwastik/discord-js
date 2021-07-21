@@ -19,7 +19,8 @@ pip install git+https://github.com/CodeWithSwastik/discord-js
 ## Simple bot
 
 ```python
-from discordjs import Client, console
+from discordjs import Client
+from javascript import console
 
 client = Client()
 
