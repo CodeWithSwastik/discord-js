@@ -1,0 +1,4 @@
+**/__pycache__
+/discord.js.egg-info
+/dist
+.env
