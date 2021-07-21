@@ -3,14 +3,19 @@
 This module lets you use discord.js in python by offering a similar syntax to the actual discord.js.
 
 ## Installation
+
 Stable version:
+
 ```
 pip install discord.js
 ```
+
 Working version:
+
 ```
 pip install git+https://github.com/CodeWithSwastik/discord-js
 ```
+
 ## Simple bot
 
 ```python
@@ -23,7 +28,7 @@ client.on("ready", lambda:
 )
 
 async def msg(message):
-    if message.startswith("!ping"):
+    if message.content.startswith("!ping"):
         await message.channel.send("pong")
 
 client.on("message", msg)

@@ -6,7 +6,7 @@ client.on("ready", lambda: console.log("Bot is ready"))
 
 
 async def msg(message):
-    if message.startswith("!ping"):
+    if message.content.startswith("!ping"):
         await message.channel.send("pong")
 
 
